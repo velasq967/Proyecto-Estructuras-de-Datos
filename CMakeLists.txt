@@ -3,4 +3,8 @@ project(Proyecto_Estructuras)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Proyecto_Estructuras main.cpp)
+add_executable(Proyecto_Estructuras main.cpp
+        Tablero.cpp
+        Tablero.h
+        Jugador.cpp
+        Jugador.h)
