@@ -1,4 +1,4 @@
-#include "Node.h"
+#include "nodo.h"
 
 Node::Node() {
     // Enlaces

@@ -4,21 +4,12 @@
 
 #ifndef PROYECTO_ESTRUCTURAS_TABLERO_H
 #define PROYECTO_ESTRUCTURAS_TABLERO_H
-<<<<<<< HEAD
-#include "Jugador.h"
 
-class Tablero {
-    Jugador* jugador;
 
-    public:
-    Tablero();
-    void mostrar_tablero();
-
-=======
 
 #include <vector>
 #include <string>
-#include "Node.h"
+#include "nodo.h"
 
 class Tablero {
 private:
@@ -59,7 +50,7 @@ public:
     // Impresiones
     void imprimirVisible() const;
     void imprimirReal() const;
->>>>>>> aea7fd155a48cd0dddf0f7862dcc6d20fb81c35c
+
 };
 
 #endif //PROYECTO_ESTRUCTURAS_TABLERO_H

@@ -2,12 +2,12 @@
 // ScoreBoard.cpp
 //
 
-#include "ScoreBoard.h"
+#include "scoreBoard.h"
 #include <vector>
 #include <algorithm>
 #include <iostream>
 
-void ScoreBoard::registrarPuntaje(const std::string& nombre, int puntaje) {
+void scoreBoard::registrarPuntaje(const std::string& nombre, int puntaje) {
     auto it = mejoresPuntajes.find(nombre);
     if (it == mejoresPuntajes.end()) {
         // Jugador nuevo
@@ -20,7 +20,7 @@ void ScoreBoard::registrarPuntaje(const std::string& nombre, int puntaje) {
     }
 }
 
-bool ScoreBoard::obtenerPuntaje(const std::string& nombre, int& puntaje) const {
+bool scoreBoard::obtenerPuntaje(const std::string& nombre, int& puntaje) const {
     auto it = mejoresPuntajes.find(nombre);
     if (it == mejoresPuntajes.end()) {
         return false;
@@ -29,7 +29,7 @@ bool ScoreBoard::obtenerPuntaje(const std::string& nombre, int& puntaje) const {
     return true;
 }
 
-void ScoreBoard::imprimirTodosOrdenados() const {
+void scoreBoard::imprimirTodosOrdenados() const {
     if (mejoresPuntajes.empty()) {
         std::cout << "No hay puntajes registrados.\n";
         return;

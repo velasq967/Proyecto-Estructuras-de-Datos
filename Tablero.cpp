@@ -197,5 +197,60 @@ void Tablero::eliminarMurosAleatorios(int cantidad) {
     int aEliminar = std::min(cantidad, static_cast<int>(muros.size()));
 
     for (int i = 0; i < aEliminar; ++i) {
-        int ind
+        int indice = rand() % muros.size();
+        Node* muroAEliminar = muros[indice];
+        
+        // Cambiar el muro a espacio vacío
+        muroAEliminar->isWall = false;
+        muroAEliminar->realType = ' ';
+        muroAEliminar->visible = ' ';
+        
+        // Remover de la lista para no seleccionar el mismo dos veces
+        muros.erase(muros.begin() + indice);
+    }
+}
 
+Node* Tablero::obtenerNodoAleatorioLibre(Node* posicionJugador) {
+    std::vector<Node*> nodosLibres;
+    
+    // Recolectar todos los nodos que son libres (no bordes, no muros)
+    for (Node* n : nodos) {
+        if (!n->isBorder && !n->isWall) {
+            // Si se proporciona posicionJugador, excluir esa posición
+            if (posicionJugador == nullptr || n != posicionJugador) {
+                nodosLibres.push_back(n);
+            }
+        }
+    }
+    
+    // Si no hay nodos libres, retornar nullptr
+    if (nodosLibres.empty()) return nullptr;
+    
+    // Retornar un nodo aleatorio de los disponibles
+    int indice = rand() % nodosLibres.size();
+    return nodosLibres[indice];
+}
+
+void Tablero::imprimirVisible() const {
+    for (int i = 0; i < FILAS; ++i) {
+        for (int j = 0; j < COLUMNAS; ++j) {
+            Node* nodo = getNode(i, j);
+            if (nodo != nullptr) {
+                std::cout << nodo->visible;
+            }
+        }
+        std::cout << "\n";
+    }
+}
+
+void Tablero::imprimirReal() const {
+    for (int i = 0; i < FILAS; ++i) {
+        for (int j = 0; j < COLUMNAS; ++j) {
+            Node* nodo = getNode(i, j);
+            if (nodo != nullptr) {
+                std::cout << nodo->realType;
+            }
+        }
+        std::cout << "\n";
+    }
+}

@@ -2,21 +2,20 @@
 // main.cpp
 //
 
-<<<<<<< HEAD
-
 
 #include "Tablero.h"
 using namespace std;
-=======
+
 #include <iostream>
 #include <string>
+#include <limits>
 #include "Tablero.h"
 #include "Jugador.h"
-#include "ScoreBoard.h"
->>>>>>> aea7fd155a48cd0dddf0f7862dcc6d20fb81c35c
+#include "scoreBoard.h"
+
 
 int main() {
-    ScoreBoard scoreboard;
+    scoreBoard scoreboard;
     bool salirPrograma = false;
 
     while (!salirPrograma) {
@@ -173,16 +172,5 @@ int main() {
     std::cout << "\nGracias por jugar.\n";
     return 0;
 }
-<<<<<<< HEAD
 
-void iniciar_juego() {
 
-    Tablero tablero = Tablero();
-
-    bool ContinuarJuego = true;
-    while (ContinuarJuego) {
-        tablero.mostrar_tablero();
-    }
-}
-=======
->>>>>>> aea7fd155a48cd0dddf0f7862dcc6d20fb81c35c

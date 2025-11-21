@@ -8,5 +8,7 @@ add_executable(Proyecto_Estructuras main.cpp
         Tablero.h
         Jugador.cpp
         Jugador.h
-        objeto.cpp
-        objeto.h)
+        nodo.cpp
+        nodo.h
+        scoreBoard.cpp
+        scoreBoard.h)

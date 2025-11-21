@@ -8,7 +8,7 @@
 #include <string>
 #include <unordered_map>
 
-class ScoreBoard {
+class scoreBoard {
 private:
     // nombreJugador -> mejor puntaje (menor número de movimientos)
     std::unordered_map<std::string, int> mejoresPuntajes;

@@ -4,21 +4,10 @@
 
 #ifndef PROYECTO_ESTRUCTURAS_JUGADOR_H
 #define PROYECTO_ESTRUCTURAS_JUGADOR_H
-<<<<<<< HEAD
-#include "objeto.h"
-#include <stack>
-
-class Jugador {
-    int posicion;
-    stack<objeto> objetos;
-
-    public:
-    Jugador();
-=======
 
 #include <string>
 #include <stack>
-#include "Node.h"
+#include "nodo.h"
 
 class Tablero; // Declaración adelantada para evitar dependencia circular
 
@@ -54,7 +43,7 @@ public:
     // TESOROS
     void mostrarTesoros() const;
     bool usarTesoro(Tablero& tablero);
->>>>>>> aea7fd155a48cd0dddf0f7862dcc6d20fb81c35c
+
 };
 
 #endif //PROYECTO_ESTRUCTURAS_JUGADOR_H
